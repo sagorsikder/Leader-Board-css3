@@ -55,7 +55,7 @@ hr{
 
 /* top blog style */
 
-.article-area{
+.blogs{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-row-gap: 26px;
@@ -89,6 +89,12 @@ hr{
 .courses{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
+    padding-bottom: 20px;
+}
+.course{
+    box-shadow: 0 5px 5px 5px whitesmoke;
+    padding: 10px;
 }
 .course-info{
     display: flex;
@@ -118,6 +124,34 @@ hr{
 }
 .course-duration i{
     margin-right: 5px;
+}
+
+/* media query */
+/* style for small device */
+@media screen and (max-width:668px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+
+}
+/* style for medium device */
+@media screen and (min-width:669px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+
 }
 
 /* main section style end */
